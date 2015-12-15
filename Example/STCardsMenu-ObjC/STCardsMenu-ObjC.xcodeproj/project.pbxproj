@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96F7DFA11C1F109E00853619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA01C1F109E00853619 /* main.m */; };
+		96F7DFA41C1F109E00853619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA31C1F109E00853619 /* AppDelegate.m */; };
+		96F7DFA71C1F109E00853619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA61C1F109E00853619 /* ViewController.m */; };
+		96F7DFAA1C1F109E00853619 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7DFA81C1F109E00853619 /* Main.storyboard */; };
+		96F7DFAC1C1F109E00853619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96F7DFAB1C1F109E00853619 /* Assets.xcassets */; };
+		96F7DFAF1C1F109E00853619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F7DFAD1C1F109E00853619 /* LaunchScreen.storyboard */; };
+		96F7DFBA1C1F109F00853619 /* STCardsMenu_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFB91C1F109F00853619 /* STCardsMenu_ObjCTests.m */; };
+		96F7DFC51C1F109F00853619 /* STCardsMenu_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFC41C1F109F00853619 /* STCardsMenu_ObjCUITests.m */; };
+		96F7DFD51C1F112A00853619 /* STCardsMenuRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFD41C1F112A00853619 /* STCardsMenuRootVC.m */; };
+		96F7DFD81C1F123A00853619 /* UIColor+STCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFD71C1F123A00853619 /* UIColor+STCreation.m */; };
+		96F7DFE71C1F18D300853619 /* STCardsMenuAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFE61C1F18D300853619 /* STCardsMenuAnimation.m */; };
+		96F7DFEA1C1F1B7400853619 /* STCardsMenuChildVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFE91C1F1B7400853619 /* STCardsMenuChildVC.m */; };
+		96F7DFED1C1F220000853619 /* STCardsMenuCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFEC1C1F220000853619 /* STCardsMenuCustomView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96F7DFB61C1F109F00853619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96F7DF941C1F109E00853619 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F7DF9B1C1F109E00853619;
+			remoteInfo = "STCardsMenu-ObjC";
+		};
+		96F7DFC11C1F109F00853619 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96F7DF941C1F109E00853619 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96F7DF9B1C1F109E00853619;
+			remoteInfo = "STCardsMenu-ObjC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96F7DF9C1C1F109E00853619 /* STCardsMenu-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STCardsMenu-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F7DFA01C1F109E00853619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96F7DFA21C1F109E00853619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		96F7DFA31C1F109E00853619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		96F7DFA51C1F109E00853619 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		96F7DFA61C1F109E00853619 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96F7DFA91C1F109E00853619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96F7DFAB1C1F109E00853619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96F7DFAE1C1F109E00853619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96F7DFB01C1F109E00853619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7DFB51C1F109F00853619 /* STCardsMenu-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "STCardsMenu-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F7DFB91C1F109F00853619 /* STCardsMenu_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCardsMenu_ObjCTests.m; sourceTree = "<group>"; };
+		96F7DFBB1C1F109F00853619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7DFC01C1F109F00853619 /* STCardsMenu-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "STCardsMenu-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96F7DFC41C1F109F00853619 /* STCardsMenu_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STCardsMenu_ObjCUITests.m; sourceTree = "<group>"; };
+		96F7DFC61C1F109F00853619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F7DFD31C1F112A00853619 /* STCardsMenuRootVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCardsMenuRootVC.h; sourceTree = "<group>"; };
+		96F7DFD41C1F112A00853619 /* STCardsMenuRootVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardsMenuRootVC.m; sourceTree = "<group>"; };
+		96F7DFD61C1F123A00853619 /* UIColor+STCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+STCreation.h"; sourceTree = "<group>"; };
+		96F7DFD71C1F123A00853619 /* UIColor+STCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+STCreation.m"; sourceTree = "<group>"; };
+		96F7DFE51C1F18D300853619 /* STCardsMenuAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCardsMenuAnimation.h; sourceTree = "<group>"; };
+		96F7DFE61C1F18D300853619 /* STCardsMenuAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardsMenuAnimation.m; sourceTree = "<group>"; };
+		96F7DFE81C1F1B7400853619 /* STCardsMenuChildVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCardsMenuChildVC.h; sourceTree = "<group>"; };
+		96F7DFE91C1F1B7400853619 /* STCardsMenuChildVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardsMenuChildVC.m; sourceTree = "<group>"; };
+		96F7DFEB1C1F220000853619 /* STCardsMenuCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCardsMenuCustomView.h; sourceTree = "<group>"; };
+		96F7DFEC1C1F220000853619 /* STCardsMenuCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCardsMenuCustomView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96F7DF991C1F109E00853619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFB21C1F109F00853619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFBD1C1F109F00853619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96F7DF931C1F109E00853619 = {
+			isa = PBXGroup;
+			children = (
+				96F7DF9E1C1F109E00853619 /* STCardsMenu-ObjC */,
+				96F7DFB81C1F109F00853619 /* STCardsMenu-ObjCTests */,
+				96F7DFC31C1F109F00853619 /* STCardsMenu-ObjCUITests */,
+				96F7DF9D1C1F109E00853619 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96F7DF9D1C1F109E00853619 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DF9C1C1F109E00853619 /* STCardsMenu-ObjC.app */,
+				96F7DFB51C1F109F00853619 /* STCardsMenu-ObjCTests.xctest */,
+				96F7DFC01C1F109F00853619 /* STCardsMenu-ObjCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96F7DF9E1C1F109E00853619 /* STCardsMenu-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DFD21C1F10C800853619 /* STCardsMenu */,
+				96F7DFA21C1F109E00853619 /* AppDelegate.h */,
+				96F7DFA31C1F109E00853619 /* AppDelegate.m */,
+				96F7DFA51C1F109E00853619 /* ViewController.h */,
+				96F7DFA61C1F109E00853619 /* ViewController.m */,
+				96F7DFA81C1F109E00853619 /* Main.storyboard */,
+				96F7DFAB1C1F109E00853619 /* Assets.xcassets */,
+				96F7DFAD1C1F109E00853619 /* LaunchScreen.storyboard */,
+				96F7DFB01C1F109E00853619 /* Info.plist */,
+				96F7DF9F1C1F109E00853619 /* Supporting Files */,
+			);
+			path = "STCardsMenu-ObjC";
+			sourceTree = "<group>";
+		};
+		96F7DF9F1C1F109E00853619 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DFA01C1F109E00853619 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96F7DFB81C1F109F00853619 /* STCardsMenu-ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DFB91C1F109F00853619 /* STCardsMenu_ObjCTests.m */,
+				96F7DFBB1C1F109F00853619 /* Info.plist */,
+			);
+			path = "STCardsMenu-ObjCTests";
+			sourceTree = "<group>";
+		};
+		96F7DFC31C1F109F00853619 /* STCardsMenu-ObjCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DFC41C1F109F00853619 /* STCardsMenu_ObjCUITests.m */,
+				96F7DFC61C1F109F00853619 /* Info.plist */,
+			);
+			path = "STCardsMenu-ObjCUITests";
+			sourceTree = "<group>";
+		};
+		96F7DFD21C1F10C800853619 /* STCardsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				96F7DFD31C1F112A00853619 /* STCardsMenuRootVC.h */,
+				96F7DFD41C1F112A00853619 /* STCardsMenuRootVC.m */,
+				96F7DFE81C1F1B7400853619 /* STCardsMenuChildVC.h */,
+				96F7DFE91C1F1B7400853619 /* STCardsMenuChildVC.m */,
+				96F7DFEB1C1F220000853619 /* STCardsMenuCustomView.h */,
+				96F7DFEC1C1F220000853619 /* STCardsMenuCustomView.m */,
+				96F7DFE51C1F18D300853619 /* STCardsMenuAnimation.h */,
+				96F7DFE61C1F18D300853619 /* STCardsMenuAnimation.m */,
+				96F7DFD61C1F123A00853619 /* UIColor+STCreation.h */,
+				96F7DFD71C1F123A00853619 /* UIColor+STCreation.m */,
+			);
+			path = STCardsMenu;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96F7DF9B1C1F109E00853619 /* STCardsMenu-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F7DFC91C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjC" */;
+			buildPhases = (
+				96F7DF981C1F109E00853619 /* Sources */,
+				96F7DF991C1F109E00853619 /* Frameworks */,
+				96F7DF9A1C1F109E00853619 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STCardsMenu-ObjC";
+			productName = "STCardsMenu-ObjC";
+			productReference = 96F7DF9C1C1F109E00853619 /* STCardsMenu-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96F7DFB41C1F109F00853619 /* STCardsMenu-ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F7DFCC1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCTests" */;
+			buildPhases = (
+				96F7DFB11C1F109F00853619 /* Sources */,
+				96F7DFB21C1F109F00853619 /* Frameworks */,
+				96F7DFB31C1F109F00853619 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96F7DFB71C1F109F00853619 /* PBXTargetDependency */,
+			);
+			name = "STCardsMenu-ObjCTests";
+			productName = "STCardsMenu-ObjCTests";
+			productReference = 96F7DFB51C1F109F00853619 /* STCardsMenu-ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96F7DFBF1C1F109F00853619 /* STCardsMenu-ObjCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F7DFCF1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCUITests" */;
+			buildPhases = (
+				96F7DFBC1C1F109F00853619 /* Sources */,
+				96F7DFBD1C1F109F00853619 /* Frameworks */,
+				96F7DFBE1C1F109F00853619 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96F7DFC21C1F109F00853619 /* PBXTargetDependency */,
+			);
+			name = "STCardsMenu-ObjCUITests";
+			productName = "STCardsMenu-ObjCUITests";
+			productReference = 96F7DFC01C1F109F00853619 /* STCardsMenu-ObjCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96F7DF941C1F109E00853619 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = tangjr;
+				TargetAttributes = {
+					96F7DF9B1C1F109E00853619 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					96F7DFB41C1F109F00853619 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 96F7DF9B1C1F109E00853619;
+					};
+					96F7DFBF1C1F109F00853619 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 96F7DF9B1C1F109E00853619;
+					};
+				};
+			};
+			buildConfigurationList = 96F7DF971C1F109E00853619 /* Build configuration list for PBXProject "STCardsMenu-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96F7DF931C1F109E00853619;
+			productRefGroup = 96F7DF9D1C1F109E00853619 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96F7DF9B1C1F109E00853619 /* STCardsMenu-ObjC */,
+				96F7DFB41C1F109F00853619 /* STCardsMenu-ObjCTests */,
+				96F7DFBF1C1F109F00853619 /* STCardsMenu-ObjCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96F7DF9A1C1F109E00853619 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F7DFAF1C1F109E00853619 /* LaunchScreen.storyboard in Resources */,
+				96F7DFAC1C1F109E00853619 /* Assets.xcassets in Resources */,
+				96F7DFAA1C1F109E00853619 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFB31C1F109F00853619 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFBE1C1F109F00853619 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96F7DF981C1F109E00853619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F7DFD81C1F123A00853619 /* UIColor+STCreation.m in Sources */,
+				96F7DFED1C1F220000853619 /* STCardsMenuCustomView.m in Sources */,
+				96F7DFD51C1F112A00853619 /* STCardsMenuRootVC.m in Sources */,
+				96F7DFA71C1F109E00853619 /* ViewController.m in Sources */,
+				96F7DFA41C1F109E00853619 /* AppDelegate.m in Sources */,
+				96F7DFE71C1F18D300853619 /* STCardsMenuAnimation.m in Sources */,
+				96F7DFEA1C1F1B7400853619 /* STCardsMenuChildVC.m in Sources */,
+				96F7DFA11C1F109E00853619 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFB11C1F109F00853619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F7DFBA1C1F109F00853619 /* STCardsMenu_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96F7DFBC1C1F109F00853619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F7DFC51C1F109F00853619 /* STCardsMenu_ObjCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96F7DFB71C1F109F00853619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96F7DF9B1C1F109E00853619 /* STCardsMenu-ObjC */;
+			targetProxy = 96F7DFB61C1F109F00853619 /* PBXContainerItemProxy */;
+		};
+		96F7DFC21C1F109F00853619 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96F7DF9B1C1F109E00853619 /* STCardsMenu-ObjC */;
+			targetProxy = 96F7DFC11C1F109F00853619 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96F7DFA81C1F109E00853619 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F7DFA91C1F109E00853619 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96F7DFAD1C1F109E00853619 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96F7DFAE1C1F109E00853619 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96F7DFC71C1F109F00853619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96F7DFC81C1F109F00853619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96F7DFCA1C1F109F00853619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "STCardsMenu-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96F7DFCB1C1F109F00853619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "STCardsMenu-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96F7DFCD1C1F109F00853619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "STCardsMenu-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STCardsMenu-ObjC.app/STCardsMenu-ObjC";
+			};
+			name = Debug;
+		};
+		96F7DFCE1C1F109F00853619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "STCardsMenu-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/STCardsMenu-ObjC.app/STCardsMenu-ObjC";
+			};
+			name = Release;
+		};
+		96F7DFD01C1F109F00853619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "STCardsMenu-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "STCardsMenu-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		96F7DFD11C1F109F00853619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "STCardsMenu-ObjCUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "STCardsMenu-ObjC";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96F7DF971C1F109E00853619 /* Build configuration list for PBXProject "STCardsMenu-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F7DFC71C1F109F00853619 /* Debug */,
+				96F7DFC81C1F109F00853619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F7DFC91C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F7DFCA1C1F109F00853619 /* Debug */,
+				96F7DFCB1C1F109F00853619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96F7DFCC1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F7DFCD1C1F109F00853619 /* Debug */,
+				96F7DFCE1C1F109F00853619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96F7DFCF1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96F7DFD01C1F109F00853619 /* Debug */,
+				96F7DFD11C1F109F00853619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96F7DF941C1F109E00853619 /* Project object */;
+}
