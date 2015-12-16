@@ -13,11 +13,6 @@ static const CGFloat STCardsMenuCustomViewLineWidth = 5.0;
 
 @implementation STCardsMenuHamburgButton
 
-- (void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
-    [self setNeedsDisplay];
-}
-
 - (void)drawRect:(CGRect)rect {
     CGFloat buttonWidth = 40.0;
     CGFloat buttonHeight = 30.0;
@@ -27,8 +22,8 @@ static const CGFloat STCardsMenuCustomViewLineWidth = 5.0;
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineJoin(context, kCGLineJoinRound);
-    [self.tintColor setStroke];
     CGContextSetLineWidth(context, STCardsMenuCustomViewLineWidth);
+    [self.tintColor setStroke];
     
     for (int i = 0; i < 3; i++) {
         CGContextBeginPath(context);

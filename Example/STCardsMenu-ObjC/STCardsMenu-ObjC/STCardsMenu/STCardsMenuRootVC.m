@@ -78,6 +78,7 @@
     [self clickAtIndex:selectIndex];
 }
 
+
 #pragma mark - Button Tapped
 
 - (void)closeButtonTapped:(STCardsMenuCloseButton *)sender {
