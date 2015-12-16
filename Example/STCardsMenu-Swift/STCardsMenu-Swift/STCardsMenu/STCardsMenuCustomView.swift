@@ -33,6 +33,26 @@ class STCardsMenuHamburgButton: UIButton {
 
 class STCardsMenuCloseButton: UIButton {
     override func drawRect(rect: CGRect) {
+        let buttonWidth: CGFloat = 30.0;
+        let leftX: CGFloat = STCardsMenuConst.CustomViewLineWidth / 2.0;
+        let rightX: CGFloat = buttonWidth - STCardsMenuConst.CustomViewLineWidth;
+        let topY: CGFloat = STCardsMenuConst.CustomViewLineWidth / 2.0;
+        let bottomY: CGFloat = buttonWidth - STCardsMenuConst.CustomViewLineWidth;
         
+        let context = UIGraphicsGetCurrentContext();
+        CGContextSetLineCap(context, .Round);
+        CGContextSetLineJoin(context, .Round);
+        UIColor(st_hex: 0x7197AF).setStroke()
+        CGContextSetLineWidth(context, STCardsMenuConst.CustomViewLineWidth);
+        
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, leftX, topY);
+        CGContextAddLineToPoint(context, rightX, bottomY);
+        CGContextStrokePath(context);
+        
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, rightX, topY);
+        CGContextAddLineToPoint(context, leftX, bottomY);
+        CGContextStrokePath(context);
     }
 }

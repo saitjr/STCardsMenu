@@ -19,6 +19,7 @@
 		96F444701C205D59003AC448 /* STCardsMenuChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4446F1C205D59003AC448 /* STCardsMenuChildVC.swift */; };
 		96F444721C206216003AC448 /* STCardsMenuConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F444711C206216003AC448 /* STCardsMenuConst.swift */; };
 		96F444741C20E20A003AC448 /* STCardsMenuCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F444731C20E20A003AC448 /* STCardsMenuCustomView.swift */; };
+		96F444801C2198F4003AC448 /* STCardsMenuAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4447F1C2198F4003AC448 /* STCardsMenuAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		96F4446F1C205D59003AC448 /* STCardsMenuChildVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCardsMenuChildVC.swift; sourceTree = "<group>"; };
 		96F444711C206216003AC448 /* STCardsMenuConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCardsMenuConst.swift; sourceTree = "<group>"; };
 		96F444731C20E20A003AC448 /* STCardsMenuCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCardsMenuCustomView.swift; sourceTree = "<group>"; };
+		96F4447F1C2198F4003AC448 /* STCardsMenuAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STCardsMenuAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,7 @@
 				96F4445E1C2053C5003AC448 /* Info.plist */,
 			);
 			path = "STCardsMenu-SwiftUITests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		96F4446A1C205C32003AC448 /* STCardsMenu */ = {
 			isa = PBXGroup;
@@ -142,6 +144,7 @@
 				96F4446B1C205C4D003AC448 /* STCardsMenuRootVC.swift */,
 				96F4446F1C205D59003AC448 /* STCardsMenuChildVC.swift */,
 				96F444731C20E20A003AC448 /* STCardsMenuCustomView.swift */,
+				96F4447F1C2198F4003AC448 /* STCardsMenuAnimation.swift */,
 				96F444711C206216003AC448 /* STCardsMenuConst.swift */,
 				96F4446D1C205C8C003AC448 /* STUIColorExtension.swift */,
 			);
@@ -284,6 +287,7 @@
 				96F4443F1C2053C5003AC448 /* ViewController.swift in Sources */,
 				96F444701C205D59003AC448 /* STCardsMenuChildVC.swift in Sources */,
 				96F4446C1C205C4D003AC448 /* STCardsMenuRootVC.swift in Sources */,
+				96F444801C2198F4003AC448 /* STCardsMenuAnimation.swift in Sources */,
 				96F4443D1C2053C5003AC448 /* AppDelegate.swift in Sources */,
 				96F444741C20E20A003AC448 /* STCardsMenuCustomView.swift in Sources */,
 			);
@@ -510,6 +514,7 @@
 				96F444631C2053C5003AC448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F444641C2053C5003AC448 /* Build configuration list for PBXNativeTarget "STCardsMenu-SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +523,7 @@
 				96F444661C2053C5003AC448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F444671C2053C5003AC448 /* Build configuration list for PBXNativeTarget "STCardsMenu-SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +532,7 @@
 				96F444691C2053C5003AC448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

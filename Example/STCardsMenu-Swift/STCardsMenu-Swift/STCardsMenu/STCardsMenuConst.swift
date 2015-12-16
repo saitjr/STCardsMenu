@@ -12,4 +12,5 @@ struct STCardsMenuConst {
     static let VCX: CGFloat = 30.0
     static let VCY: CGFloat = 80.0
     static let CustomViewLineWidth: CGFloat = 5.0
+    static let AnimationDuration: NSTimeInterval = 0.5
 }
