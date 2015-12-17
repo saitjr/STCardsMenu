@@ -35,9 +35,9 @@
     self.childCount = self.childViewControllers.count;
     for (NSInteger i = 0; i < self.childCount; i++) {
         STCardsMenuChildVC *childVC = self.childViewControllers[i];
-        childVC.delegate = self;
         childVC.view.transform = CGAffineTransformMakeTranslation((i + 1) * STVCX, (i + 1) * STVCY);
         childVC.view.layer.cornerRadius = 8.0;
+        childVC.delegate = self;
     }
 }
 

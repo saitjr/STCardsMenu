@@ -10,6 +10,8 @@
 #import "STCardsMenuRootVC.h"
 #import "UIColor+STCreation.h"
 #import "STCardsMenuChildVC.h"
+#import "RootViewController.h"
+#import "ChildViewController.h"
 
 @interface ViewController ()
 
@@ -23,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    STCardsMenuRootVC *rootVC = [STCardsMenuRootVC new];
+    RootViewController *rootVC = [RootViewController new];
     [self.view addSubview:rootVC.view];
     [self addChildViewController:rootVC];
     self.cardsMenuRootVC = rootVC;
@@ -36,7 +38,7 @@
     NSArray *titles = @[@"CONTACT", @"ABOUT", @"TEAM", @"PROJECTS"];
     NSArray *tintColors = @[[UIColor st_colorWithHex:0xF18264], [UIColor st_colorWithHex:0xFEE177], [UIColor st_colorWithHex:0x553860], [UIColor st_colorWithHex:0xA5435D]];
     for (int i = 0; i < 4; i++) {
-        STCardsMenuChildVC *childVC = [STCardsMenuChildVC new];
+        ChildViewController *childVC = [ChildViewController new];
         childVC.tintColor = tintColors[i];
         childVC.title = titles[i];
         childVC.view.backgroundColor = backgroundColors[i];

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964E42931C22830400D0628F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964E42921C22830400D0628F /* RootViewController.m */; };
+		964E42961C22831E00D0628F /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964E42951C22831E00D0628F /* ChildViewController.m */; };
 		96F7DFA11C1F109E00853619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA01C1F109E00853619 /* main.m */; };
 		96F7DFA41C1F109E00853619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA31C1F109E00853619 /* AppDelegate.m */; };
 		96F7DFA71C1F109E00853619 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F7DFA61C1F109E00853619 /* ViewController.m */; };
@@ -41,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		964E42901C225F1B00D0628F /* STCardsMenuConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCardsMenuConst.h; sourceTree = "<group>"; };
+		964E42911C22830400D0628F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		964E42921C22830400D0628F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		964E42941C22831E00D0628F /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		964E42951C22831E00D0628F /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
 		96F7DF9C1C1F109E00853619 /* STCardsMenu-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STCardsMenu-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F7DFA01C1F109E00853619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96F7DFA21C1F109E00853619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +128,10 @@
 				96F7DFA31C1F109E00853619 /* AppDelegate.m */,
 				96F7DFA51C1F109E00853619 /* ViewController.h */,
 				96F7DFA61C1F109E00853619 /* ViewController.m */,
+				964E42911C22830400D0628F /* RootViewController.h */,
+				964E42921C22830400D0628F /* RootViewController.m */,
+				964E42941C22831E00D0628F /* ChildViewController.h */,
+				964E42951C22831E00D0628F /* ChildViewController.m */,
 				96F7DFA81C1F109E00853619 /* Main.storyboard */,
 				96F7DFAB1C1F109E00853619 /* Assets.xcassets */,
 				96F7DFAD1C1F109E00853619 /* LaunchScreen.storyboard */,
@@ -310,7 +320,9 @@
 				96F7DFD51C1F112A00853619 /* STCardsMenuRootVC.m in Sources */,
 				96F7DFA71C1F109E00853619 /* ViewController.m in Sources */,
 				96F7DFA41C1F109E00853619 /* AppDelegate.m in Sources */,
+				964E42931C22830400D0628F /* RootViewController.m in Sources */,
 				96F7DFE71C1F18D300853619 /* STCardsMenuAnimation.m in Sources */,
+				964E42961C22831E00D0628F /* ChildViewController.m in Sources */,
 				96F7DFEA1C1F1B7400853619 /* STCardsMenuChildVC.m in Sources */,
 				96F7DFA11C1F109E00853619 /* main.m in Sources */,
 			);

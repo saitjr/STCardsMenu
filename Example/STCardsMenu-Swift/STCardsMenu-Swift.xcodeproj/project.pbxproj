@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964E42981C22AF4900D0628F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E42971C22AF4900D0628F /* RootViewController.swift */; };
+		964E429A1C22AF5900D0628F /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E42991C22AF5900D0628F /* ChildViewController.swift */; };
 		96F4443D1C2053C5003AC448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4443C1C2053C5003AC448 /* AppDelegate.swift */; };
 		96F4443F1C2053C5003AC448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4443E1C2053C5003AC448 /* ViewController.swift */; };
 		96F444421C2053C5003AC448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F444401C2053C5003AC448 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		964E42971C22AF4900D0628F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		964E42991C22AF5900D0628F /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		96F444391C2053C5003AC448 /* STCardsMenu-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STCardsMenu-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F4443C1C2053C5003AC448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F4443E1C2053C5003AC448 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				96F4446A1C205C32003AC448 /* STCardsMenu */,
 				96F4443C1C2053C5003AC448 /* AppDelegate.swift */,
 				96F4443E1C2053C5003AC448 /* ViewController.swift */,
+				964E42971C22AF4900D0628F /* RootViewController.swift */,
+				964E42991C22AF5900D0628F /* ChildViewController.swift */,
 				96F444401C2053C5003AC448 /* Main.storyboard */,
 				96F444431C2053C5003AC448 /* Assets.xcassets */,
 				96F444451C2053C5003AC448 /* LaunchScreen.storyboard */,
@@ -283,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F4446E1C205C8C003AC448 /* STUIColorExtension.swift in Sources */,
+				964E429A1C22AF5900D0628F /* ChildViewController.swift in Sources */,
 				96F444721C206216003AC448 /* STCardsMenuConst.swift in Sources */,
+				964E42981C22AF4900D0628F /* RootViewController.swift in Sources */,
 				96F4443F1C2053C5003AC448 /* ViewController.swift in Sources */,
 				96F444701C205D59003AC448 /* STCardsMenuChildVC.swift in Sources */,
 				96F4446C1C205C4D003AC448 /* STCardsMenuRootVC.swift in Sources */,
