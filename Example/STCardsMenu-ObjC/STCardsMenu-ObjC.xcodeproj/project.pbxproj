@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		964E42901C225F1B00D0628F /* STCardsMenuConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCardsMenuConst.h; sourceTree = "<group>"; };
 		96F7DF9C1C1F109E00853619 /* STCardsMenu-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STCardsMenu-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F7DFA01C1F109E00853619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96F7DFA21C1F109E00853619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 				96F7DFEC1C1F220000853619 /* STCardsMenuCustomView.m */,
 				96F7DFE51C1F18D300853619 /* STCardsMenuAnimation.h */,
 				96F7DFE61C1F18D300853619 /* STCardsMenuAnimation.m */,
+				964E42901C225F1B00D0628F /* STCardsMenuConst.h */,
 				96F7DFD61C1F123A00853619 /* UIColor+STCreation.h */,
 				96F7DFD71C1F123A00853619 /* UIColor+STCreation.m */,
 			);
@@ -449,10 +451,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shenzhen bluepoint interaction technology Co., Ltd.";
 				INFOPLIST_FILE = "STCardsMenu-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saitjr.cardsMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6dfa6659-f164-4385-a7be-705141305f29";
 			};
 			name = Debug;
 		};
@@ -460,10 +464,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: shenzhen bluepoint interaction technology Co., Ltd.";
 				INFOPLIST_FILE = "STCardsMenu-ObjC/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saitjr.tangjr.STCardsMenu-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.saitjr.cardsMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6dfa6659-f164-4385-a7be-705141305f29";
 			};
 			name = Release;
 		};
@@ -534,6 +540,7 @@
 				96F7DFCB1C1F109F00853619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F7DFCC1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +549,7 @@
 				96F7DFCE1C1F109F00853619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F7DFCF1C1F109F00853619 /* Build configuration list for PBXNativeTarget "STCardsMenu-ObjCUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +558,7 @@
 				96F7DFD11C1F109F00853619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
