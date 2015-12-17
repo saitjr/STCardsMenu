@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.hamburgButton.alpha = 0;
-    [self clearButton];
 }
 
 #pragma mark - Button Tapped
@@ -28,12 +27,6 @@
 - (void)hamburgButtonTapped:(STCardsMenuHamburgButton *)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(cardsMenu:hamburgButtonTapped:)]) {
         [self.delegate cardsMenu:self hamburgButtonTapped:sender];
-    }
-}
-
-- (void)clearButtonTapped:(UIButton *)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(cardsMenu:clearButtonTapped:)]) {
-        [self.delegate cardsMenu:self clearButtonTapped:sender];
     }
 }
 
@@ -87,21 +80,6 @@
         [_titleLabel addConstraints:@[heightConstraint]];
     }
     return _titleLabel;
-}
-
-- (UIButton *)clearButton {
-    if (!_clearButton) {
-        _clearButton = [UIButton new];
-        [_clearButton addTarget:self action:@selector(clearButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        _clearButton.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.view addSubview:_clearButton];
-        NSLayoutConstraint *conX = [_clearButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor];
-        NSLayoutConstraint *conY = [_clearButton.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor];
-        NSLayoutConstraint *width = [_clearButton.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:1];
-        NSLayoutConstraint *height = [_clearButton.heightAnchor constraintEqualToAnchor:self.view.heightAnchor multiplier:1];
-        [NSLayoutConstraint activateConstraints:@[conX, conY, width, height]];
-    }
-    return _clearButton;
 }
 
 @end

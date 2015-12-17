@@ -7,6 +7,7 @@
 //
 
 #import "STCardsMenuAnimation.h"
+#import "STCardsMenuConst.h"
 
 static const NSTimeInterval STCardsMenuAnimationDuration = 0.5;
 

@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-static const CGFloat STVCX = 30.0;
-static const CGFloat STVCY = 80.0;
-
 @interface STCardsMenuAnimation : NSObject
 
 + (void)cardIdentityAnimationWithView:(UIView *)view;

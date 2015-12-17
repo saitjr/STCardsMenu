@@ -57,7 +57,7 @@ class STCardsMenuAnimation {
         }
     }
     
-    static func closeButtonHideAnimation(closeButton: UIButton) {
+    static func closeButtonHideAnimation(closeButton: STCardsMenuCloseButton) {
         UIView.animateWithDuration(STCardsMenuConst.AnimationDuration, animations: { () -> Void in
             closeButton.alpha = 0.0
             closeButton.transform = CGAffineTransformConcat(CGAffineTransformMakeRotation(CGFloat(M_PI_4) / 4.0), CGAffineTransformMakeTranslation(STCardsMenuConst.VCX - 5.0, STCardsMenuConst.VCY + 5.0))
@@ -66,7 +66,7 @@ class STCardsMenuAnimation {
         }
     }
     
-    static func closeButtonShowAnimation(closeButton: UIButton) {
+    static func closeButtonShowAnimation(closeButton: STCardsMenuCloseButton) {
         closeButton.hidden = false
         UIView.animateWithDuration(STCardsMenuConst.AnimationDuration, animations: { () -> Void in
             closeButton.alpha = 1.0

@@ -11,7 +11,6 @@ import UIKit
 protocol STCardsMenuChildVCDelegate: class {
     
     func hamburgButtonTapped(childVC: STCardsMenuChildVC, hamburgButton: STCardsMenuHamburgButton)
-    func clearButtonTapped(childVC: STCardsMenuChildVC, clearButton: UIButton)
 }
 
 class STCardsMenuChildVC: UIViewController {
@@ -20,7 +19,6 @@ class STCardsMenuChildVC: UIViewController {
     weak var delegate: STCardsMenuChildVCDelegate?
     let hamburgButton = STCardsMenuHamburgButton()
     let titleLabel = UILabel()
-    let clearButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +29,6 @@ class STCardsMenuChildVC: UIViewController {
         super.viewWillAppear(animated)
         setupHamburgButton()
         setupTitlabel()
-        setupClearButton()
     }
 }
 
@@ -61,25 +58,10 @@ extension STCardsMenuChildVC {
         titleLabel.addConstraints([heightConstraint])
         view.addConstraints([leftConstraint, topConstraint])
     }
-    
-    private func setupClearButton() {
-        view.addSubview(clearButton)
-        clearButton.addTarget(self, action: Selector("clearButtonTapped:"), forControlEvents: .TouchUpInside)
-        clearButton.translatesAutoresizingMaskIntoConstraints = false
-        let leftConstraint = NSLayoutConstraint(item: clearButton, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: 0.0)
-        let topConstraint = NSLayoutConstraint(item: clearButton, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: 0.0)
-        let rightConstriant = NSLayoutConstraint(item: clearButton, attribute: .Right, relatedBy: .Equal, toItem: view, attribute: .Right, multiplier: 1.0, constant: 0.0)
-        let bottomConstraint = NSLayoutConstraint(item: clearButton, attribute: .Bottom, relatedBy: .Equal, toItem: view, attribute: .Bottom, multiplier: 1.0, constant: 0.0)
-        view.addConstraints([leftConstraint, topConstraint, rightConstriant, bottomConstraint])
-    }
 }
 
 extension STCardsMenuChildVC {
     func hamburgButtonTapped(sender: STCardsMenuHamburgButton) {
         delegate?.hamburgButtonTapped(self, hamburgButton: sender)
-    }
-    
-    func clearButtonTapped(sender: UIButton) {
-        delegate?.clearButtonTapped(self, clearButton: sender)
     }
 }

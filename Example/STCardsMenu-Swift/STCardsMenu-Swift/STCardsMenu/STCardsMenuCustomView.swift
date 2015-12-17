@@ -31,7 +31,25 @@ class STCardsMenuHamburgButton: UIButton {
     }
 }
 
-class STCardsMenuCloseButton: UIButton {
+class STCardsMenuCloseButton: UIView {
+    
+    override init (frame : CGRect) {
+        super.init(frame : frame)
+        setupView()
+    }
+    
+    convenience init () {
+        self.init(frame:CGRect.zero)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("This class does not support NSCoding")
+    }
+    
+    private func setupView (){
+        backgroundColor = UIColor.clearColor()
+    }
+    
     override func drawRect(rect: CGRect) {
         let buttonWidth: CGFloat = 30.0;
         let leftX: CGFloat = STCardsMenuConst.CustomViewLineWidth / 2.0;
@@ -54,5 +72,53 @@ class STCardsMenuCloseButton: UIButton {
         CGContextMoveToPoint(context, rightX, topY);
         CGContextAddLineToPoint(context, leftX, bottomY);
         CGContextStrokePath(context);
+    }
+}
+
+protocol STCardsMenuClearWindowDelegate: class {
+    func clearWindowTouched(clearWindow: STCardsMenuClearWindow, touchPoint: CGPoint)
+}
+
+class STCardsMenuClearWindow: UIWindow {
+    
+    weak var delegate: STCardsMenuClearWindowDelegate?
+    
+    override init (frame : CGRect) {
+        super.init(frame : frame)
+        setupView()
+    }
+    
+    convenience init () {
+        self.init(frame:CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds)))
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        fatalError("This class does not support NSCoding")
+    }
+    
+    private func setupView (){
+        backgroundColor = UIColor.clearColor()
+    }
+}
+
+extension STCardsMenuClearWindow {
+    func show() {
+        makeKeyAndVisible()
+        alpha = 1.0
+        hidden = false
+    }
+    
+    func hide() {
+        hidden = true
+    }
+}
+
+extension STCardsMenuClearWindow {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event)
+        if let touch: UITouch = touches.first {
+            let touchPoint = touch.locationInView(self)
+            delegate?.clearWindowTouched(self, touchPoint: touchPoint)
+        }
     }
 }

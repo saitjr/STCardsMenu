@@ -8,10 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+@class STCardsMenuClearWindow;
+
+@protocol STCardsMenuClearWindowDelegate <NSObject>
+
+- (void)clearWindow:(STCardsMenuClearWindow *)window touchPoint:(CGPoint)touchPoint event:(UIEvent *)event;
+
+@end
+
 @interface STCardsMenuHamburgButton : UIButton
 
 @end
 
-@interface STCardsMenuCloseButton : UIButton
+@interface STCardsMenuCloseButton : UIView
+
+@end
+
+@interface STCardsMenuClearWindow : UIWindow
+
+@property (weak, nonatomic) id<STCardsMenuClearWindowDelegate> delegate;
+
+- (void)show;
+- (void)hide;
 
 @end

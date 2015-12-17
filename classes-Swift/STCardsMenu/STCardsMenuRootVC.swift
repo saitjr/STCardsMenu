@@ -13,6 +13,7 @@ class STCardsMenuRootVC: UIViewController {
     var childCount: Int = 0
     var lastSelectIndex: Int = 0
     let closeButton = STCardsMenuCloseButton()
+    let clearWindow = STCardsMenuClearWindow()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class STCardsMenuRootVC: UIViewController {
             childVC.delegate = self
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        setupClearWindow()
+    }
 }
 
 extension STCardsMenuRootVC: STCardsMenuChildVCDelegate {
@@ -39,14 +45,26 @@ extension STCardsMenuRootVC: STCardsMenuChildVCDelegate {
         STCardsMenuAnimation.hamburgButtonHideAnimation(hamburgButton, titleLabel: childVC.titleLabel)
         for i in 0 ..< childCount {
             let childVC = childViewControllers[i] as! STCardsMenuChildVC
-            childVC.clearButton.hidden = false
+            clearWindow.show()
             STCardsMenuAnimation.cardsMenuScaleLittleAnimation(childVC.view, point: CGPointMake((CGFloat(i) + 1.0) * STCardsMenuConst.VCX, (CGFloat(i) + 1.0) * STCardsMenuConst.VCY))
         }
     }
-    
-    func clearButtonTapped(childVC: STCardsMenuChildVC, clearButton: UIButton) {
-        let selectIndex = childViewControllers.indexOf(childVC)!
-        clickAtIndex(selectIndex)
+}
+
+extension STCardsMenuRootVC: STCardsMenuClearWindowDelegate {
+    func clearWindowTouched(clearWindow: STCardsMenuClearWindow, touchPoint: CGPoint) {
+        if CGRectContainsPoint(closeButton.frame, touchPoint) {
+            clickAtIndex(lastSelectIndex)
+            return
+        }
+        for i in 0 ..< childCount {
+            let childVC = childViewControllers[childCount - i - 1] as! STCardsMenuChildVC
+            let isInside = CGRectContainsPoint(childVC.view.frame, touchPoint)
+            if isInside {
+                clickAtIndex(childCount - i - 1)
+                break
+            }
+        }
     }
 }
 
@@ -55,18 +73,17 @@ extension STCardsMenuRootVC {
         guard selectIndex <= childCount else {
             return
         }
+        clearWindow.hide()
         lastSelectIndex = selectIndex
         let currentChildVC = childViewControllers[selectIndex] as! STCardsMenuChildVC
         STCardsMenuAnimation.hamburgButtonShowAnimation(currentChildVC.hamburgButton, titleLabel: currentChildVC.titleLabel)
         STCardsMenuAnimation.closeButtonHideAnimation(closeButton)
         for i in 0 ... selectIndex {
             let childVC = childViewControllers[i] as! STCardsMenuChildVC
-            childVC.clearButton.hidden = true
             STCardsMenuAnimation.cardsMenuIdentityAnimation(childVC.view)
         }
         for i in selectIndex + 1 ..< childCount {
             let childVC = childViewControllers[i] as! STCardsMenuChildVC
-            childVC.clearButton.hidden = true
             STCardsMenuAnimation.cardsMenuToRightAnimation(childVC.view)
         }
     }
@@ -79,7 +96,6 @@ extension STCardsMenuRootVC {
 extension STCardsMenuRootVC {
     private func setupCloseButton() {
         view.addSubview(closeButton)
-        closeButton.addTarget(self, action: Selector("closeButtonTapped:"), forControlEvents: .TouchUpInside)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         let leftConstraint = NSLayoutConstraint(item: closeButton, attribute: .Left, relatedBy: .Equal, toItem: view, attribute: .Left, multiplier: 1.0, constant: STCardsMenuConst.VCX)
         let topConstraint = NSLayoutConstraint(item: closeButton, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1.0, constant: STCardsMenuConst.VCX)
@@ -87,5 +103,10 @@ extension STCardsMenuRootVC {
         let heightConstraint = NSLayoutConstraint(item: closeButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 30.0)
         closeButton.addConstraints([widthConstraint, heightConstraint])
         view.addConstraints([leftConstraint, topConstraint])
+    }
+    
+    private func setupClearWindow() {
+        clearWindow.delegate = self
+        clearWindow.show()
     }
 }
