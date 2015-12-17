@@ -10,12 +10,14 @@
 #import "UIColor+STCreation.h"
 #import "STCardsMenuAnimation.h"
 #import "STCardsMenuChildVC.h"
+#import "STCardsMenuConst.h"
 
-@interface STCardsMenuRootVC () <STCardsMenuChildVCDelegate>
+@interface STCardsMenuRootVC () <STCardsMenuChildVCDelegate, STCardsMenuClearWindowDelegate>
 
-@property (assign, nonatomic) UInt8 childCount;
-@property (assign, nonatomic) UInt8 lastSelectedIndex;
+@property (assign, nonatomic) NSInteger childCount;
+@property (assign, nonatomic) NSInteger lastSelectedIndex;
 @property (strong, nonatomic) STCardsMenuCloseButton *closeButton;
+@property (strong, nonatomic) STCardsMenuClearWindow *clearWindow;
 
 @end
 
@@ -31,7 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.childCount = self.childViewControllers.count;
-    for (UInt16 i = 0; i < self.childCount; i++) {
+    for (NSInteger i = 0; i < self.childCount; i++) {
         STCardsMenuChildVC *childVC = self.childViewControllers[i];
         childVC.delegate = self;
         childVC.view.transform = CGAffineTransformMakeTranslation((i + 1) * STVCX, (i + 1) * STVCY);
@@ -39,23 +41,27 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.clearWindow show];
+}
+
 - (void)clickAtIndex:(UInt8)selectIndex {
     if (selectIndex >= self.childCount) {
         return;
     }
     self.lastSelectedIndex = selectIndex;
+    [self.clearWindow hide];
     [STCardsMenuAnimation closeButtonHideAnimationWithView:self.closeButton];
     STCardsMenuChildVC *selectVC = self.childViewControllers[selectIndex];
     [STCardsMenuAnimation hamburgShowAnimationWithView:selectVC.hamburgButton];
     [STCardsMenuAnimation titleMoveToRightAnimationWithView:selectVC.titleLabel];
-    for (UInt16 i = 0; i <= selectIndex; i++) {
+    for (NSInteger i = 0; i <= selectIndex; i++) {
         STCardsMenuChildVC *childVC = self.childViewControllers[i];
-        childVC.clearButton.hidden = YES;
         [STCardsMenuAnimation cardIdentityAnimationWithView:childVC.view];
     }
-    for (UInt16 i = selectIndex + 1; i < self.childCount; i++) {
+    for (NSInteger i = selectIndex + 1; i < self.childCount; i++) {
         STCardsMenuChildVC *childVC = self.childViewControllers[i];
-        childVC.clearButton.hidden = YES;
         [STCardsMenuAnimation cardMoveToRightAnimationWithView:childVC.view];
     }
 }
@@ -63,26 +69,37 @@
 #pragma mark - STCardsMenuChildVCDelegate
 
 - (void)cardsMenu:(STCardsMenuChildVC *)cardsMenuVC hamburgButtonTapped:(STCardsMenuHamburgButton *)hamburgButton {
+    [self.clearWindow show];
     [STCardsMenuAnimation closeButtonShowAnimationWithView:self.closeButton];
     [STCardsMenuAnimation hamburgIdentityAnimationWithView:hamburgButton];
     [STCardsMenuAnimation titleIdentityAnimationWithView:cardsMenuVC.titleLabel];
-    for (UInt16 i = 0; i < self.childCount; i++) {
+    for (NSInteger i = 0; i < self.childCount; i++) {
         STCardsMenuChildVC *childVC = self.childViewControllers[i];
-        childVC.clearButton.hidden = NO;
         [STCardsMenuAnimation cardScaleLittleAnimationWithView:childVC.view point:CGPointMake((i + 1) * STVCX, (i + 1) * STVCY)];
     }
 }
 
 - (void)cardsMenu:(STCardsMenuChildVC *)cardsMenuVC clearButtonTapped:(UIButton *)hamburgButton {
-    UInt8 selectIndex = [self.childViewControllers indexOfObject:cardsMenuVC];
+    NSInteger selectIndex = [self.childViewControllers indexOfObject:cardsMenuVC];
     [self clickAtIndex:selectIndex];
 }
 
+#pragma mark - STCardsMenuClearWindowDelegate
 
-#pragma mark - Button Tapped
-
-- (void)closeButtonTapped:(STCardsMenuCloseButton *)sender {
-    [self clickAtIndex:self.lastSelectedIndex];
+- (void)clearWindow:(STCardsMenuClearWindow *)window touchPoint:(CGPoint)touchPoint event:(UIEvent *)event {
+    if (CGRectContainsPoint(self.closeButton.frame, touchPoint)) {
+        [self clickAtIndex:self.lastSelectedIndex];
+        return;
+    }
+    for (NSInteger i = self.childCount - 1; i >= 0; i--) {
+        STCardsMenuChildVC *childVC = self.childViewControllers[i];
+        BOOL isInside = CGRectContainsPoint(childVC.view.frame, touchPoint);
+        if (isInside) {
+            [self.clearWindow hide];
+            [self clickAtIndex:i];
+            break;
+        }
+    }
 }
 
 #pragma mark - Getter / Setter
@@ -90,7 +107,6 @@
 - (STCardsMenuCloseButton *)closeButton {
     if (!_closeButton) {
         _closeButton = [STCardsMenuCloseButton new];
-        [_closeButton addTarget:self action:@selector(closeButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         _closeButton.translatesAutoresizingMaskIntoConstraints = NO;
         [self.view addSubview:_closeButton];
         NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:_closeButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeft multiplier:1 constant:STVCX];
@@ -101,6 +117,14 @@
         [_closeButton addConstraints:@[widthConstraint, heightConstraint]];
     }
     return _closeButton;
+}
+
+- (UIWindow *)clearWindow {
+    if (!_clearWindow) {
+        _clearWindow = [STCardsMenuClearWindow new];
+        _clearWindow.delegate = self;
+    }
+    return _clearWindow;
 }
 
 @end

@@ -37,6 +37,14 @@ static const CGFloat STCardsMenuCustomViewLineWidth = 5.0;
 
 @implementation STCardsMenuCloseButton
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     CGFloat buttonWidth = 30.0;
     CGFloat leftX = STCardsMenuCustomViewLineWidth / 2.0;
@@ -59,6 +67,37 @@ static const CGFloat STCardsMenuCustomViewLineWidth = 5.0;
     CGContextMoveToPoint(context, rightX, topY);
     CGContextAddLineToPoint(context, leftX, bottomY);
     CGContextStrokePath(context);
+}
+
+@end
+
+@implementation STCardsMenuClearWindow
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds));
+        self.backgroundColor = [UIColor clearColor];
+        self.alpha = 0.0;
+    }
+    return self;
+}
+
+- (void)show {
+    self.alpha = 1.0;
+    [self makeKeyAndVisible];
+}
+
+- (void)hide {
+    self.hidden = YES;
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesEnded:touches withEvent:event];
+    CGPoint touchPoint = [[touches anyObject] locationInView:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(clearWindow:touchPoint:event:)]) {
+        [self.delegate clearWindow:self touchPoint:touchPoint event:event];
+    }
 }
 
 @end

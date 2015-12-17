@@ -14,7 +14,6 @@
 @protocol STCardsMenuChildVCDelegate <NSObject>
 
 - (void)cardsMenu:(STCardsMenuChildVC *)cardsMenuVC hamburgButtonTapped:(STCardsMenuHamburgButton *)hamburgButton;
-- (void)cardsMenu:(STCardsMenuChildVC *)cardsMenuVC clearButtonTapped:(UIButton *)hamburgButton;
 
 @end
 
@@ -25,6 +24,5 @@
 
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) STCardsMenuHamburgButton *hamburgButton;
-@property (strong, nonatomic) UIButton *clearButton;
 
 @end
